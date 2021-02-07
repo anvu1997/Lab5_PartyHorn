@@ -2,6 +2,7 @@ function getVolume(number)
 {
     changeInput(number.target.value);
 }
+
 function changeInput(num)
 {
     document.getElementById("volume-number").value = num;
@@ -51,6 +52,6 @@ function changeRadio()
 document.getElementById("volume-slider").addEventListener("input", getVolume);
 document.getElementById("volume-number").addEventListener("input", getVolume);
 document.getElementById("audio-selection").addEventListener("change", changeRadio);
-document.getElementById("honk-btn").addEventListener("submit", function(honk) { honk.preventDefault();
+document.getElementById("honk-btn").addEventListener("submit", function(event) { event.preventDefault();
     document.getElementById("horn-sound").play();
 });
