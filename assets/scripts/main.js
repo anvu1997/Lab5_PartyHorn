@@ -52,6 +52,6 @@ function changeRadio()
 document.getElementById("volume-slider").addEventListener("input", getVolume);
 document.getElementById("volume-number").addEventListener("input", getVolume);
 document.getElementById("audio-selection").addEventListener("change", changeRadio);
-document.getElementById("honk-btn").addEventListener("submit", function(event) { event.preventDefault();
+document.getElementById("party-horn-form").addEventListener("submit", function(event) { event.preventDefault();
     document.getElementById("horn-sound").play();
 });
