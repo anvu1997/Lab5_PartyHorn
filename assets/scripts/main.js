@@ -28,19 +28,25 @@ function changeRadio()
             selected = sound.id;
         }
         if (selected == "radio-air-horn"){
-            document.getElementById("sound-image").src = "./assets/media/images/air-horn.svg";
-            document.getElementById("sound-image").alt = "Air Horn";
+            document.getElementById('sound-image').src = "./assets/media/images/air-horn.svg";
+            document.getElementById('sound-image').alt = "Air Horn";
             document.getElementById('horn-sound').src = "./assets/media/audio/air-horn.mp3";
         }
         if (selected == "radio-car-horn"){
-            document.getElementById("sound-image").src = "./assets/media/images/car.svg";
-            document.getElementById("sound-image").alt = "Car Horn";
+            document.getElementById('sound-image').src = "./assets/media/images/car.svg";
+            document.getElementById('sound-image').alt = "Car Horn";
             document.getElementById('horn-sound').src = "./assets/media/audio/car-horn.mp3";
         }
         if (selected == "radio-party-horn"){
-            document.getElementById("sound-image").src = "./assets/media/images/party-horn.svg";
-            document.getElementById("sound-image").alt = "Party Horn";
+            document.getElementById('sound-image').src = "./assets/media/images/party-horn.svg";
+            document.getElementById('sound-image').alt = "Party Horn";
             document.getElementById('horn-sound').src = "./assets/media/audio/party-horn.mp3";
         }
     }
 }
+document.getElementById('honk-btn').addEventListener("submit", function(honk) { honk.preventDefault();
+    document.getElementById('horn-sound').play();
+});
+document.getElementById("volume-slider").addEventListener("input", changeInput);
+document.getElementById("volume-number").addEventListener("input", changeInput);
+document.getElementById("audio-selection").addEventListener("change", changeRadio);
