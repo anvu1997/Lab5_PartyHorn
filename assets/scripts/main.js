@@ -13,12 +13,20 @@ function changeInput(num)
         document.getElementById("honk-btn").disabled = true;
     }
     else if (num < 34)
+    {
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-1.svg";
+        document.getElementById("honk-btn").disabled = false;
+    }
     else if (num < 67)
+    {
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-2.svg";
+        document.getElementById("honk-btn").disabled = false;
+    }
     else if (num < 101)
+    {
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-3.svg";
-    document.getElementById("honk-btn").disabled = false;
+        document.getElementById("honk-btn").disabled = false;
+    }
 }
 
 function changeRadio()
