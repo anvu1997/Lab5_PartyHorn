@@ -4,7 +4,6 @@ function getVolume(number)
 }
 function changeInput(num)
 {
-    document.getElementById("honk-btn").disabled = false;
     document.getElementById("volume-number").value = num;
     document.getElementById("volume-slider").value = num;
     document.getElementById('horn-sound').volume = num / 100;
@@ -48,10 +47,9 @@ function changeRadio()
         }
     }
 }
-document.getElementById("honk-btn").addEventListener("submit", function(honk) { honk.preventDefault();
-    document.getElementById("horn-sound").play();
-});
 document.getElementById("volume-slider").addEventListener("input", getVolume);
 document.getElementById("volume-number").addEventListener("input", getVolume);
 document.getElementById("audio-selection").addEventListener("change", changeRadio);
-    
+document.getElementById("honk-btn").addEventListener("submit", function(honk) { honk.preventDefault();
+    document.getElementById("horn-sound").play();
+});
