@@ -4,6 +4,7 @@ function getVolume(number)
 }
 function changeInput(num)
 {
+    document.getElementById("honk-btn").disabled = false;
     document.getElementById("volume-number").value = num;
     document.getElementById("volume-slider").value = num;
     document.getElementById('horn-sound').volume = num / 100;
