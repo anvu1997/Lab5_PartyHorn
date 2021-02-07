@@ -18,6 +18,7 @@ function changeInput(num)
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-2.svg";
     else if (num < 101)
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-3.svg";
+    document.getElementById("honk-btn").disabled = false;
 }
 
 function changeRadio()
