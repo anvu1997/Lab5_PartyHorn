@@ -7,26 +7,18 @@ function changeInput(num)
     document.getElementById("volume-number").value = num;
     document.getElementById("volume-slider").value = num;
     document.getElementById('horn-sound').volume = num / 100;
-    if (num == 0)
-    {
-        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-0.svg";
+    if (num > 0)
+        document.getElementById("honk-btn").disabled = false;
+    else 
         document.getElementById("honk-btn").disabled = true;
-    }
+    if (num == 0)
+        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-0.svg";
     else if (num < 34)
-    {
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-1.svg";
-        document.getElementById("honk-btn").disabled = false;
-    }
     else if (num < 67)
-    {
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-2.svg";
-        document.getElementById("honk-btn").disabled = false;
-    }
     else if (num < 101)
-    {
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-3.svg";
-        document.getElementById("honk-btn").disabled = false;
-    }
 }
 
 function changeRadio()
